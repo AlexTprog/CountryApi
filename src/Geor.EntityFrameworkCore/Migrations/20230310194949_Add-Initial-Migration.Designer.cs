@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Geor.Migrations
 {
     [DbContext(typeof(GeorDbContext))]
-    [Migration("20230310003224_Add-Initial-Migration")]
+    [Migration("20230310194949_Add-Initial-Migration")]
     partial class AddInitialMigration
     {
         /// <inheritdoc />
@@ -1315,6 +1315,27 @@ namespace Geor.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("AbpWebhookSubscriptions");
+                });
+
+            modelBuilder.Entity("Geor.Application.Country", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("CountryCode")
+                        .IsRequired()
+                        .HasMaxLength(3)
+                        .HasColumnType("varchar(3)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(256)
+                        .HasColumnType("varchar(256)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Country");
                 });
 
             modelBuilder.Entity("Geor.Authorization.Roles.Role", b =>

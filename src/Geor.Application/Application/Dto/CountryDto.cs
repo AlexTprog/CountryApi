@@ -1,15 +1,17 @@
 ﻿using Abp.Application.Services.Dto;
-using System.ComponentModel.DataAnnotations;
+using Abp.AutoMapper;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Geor.Application.Dto
 {
-    public class CountryDto : EntityDto
+    [AutoMap(typeof(Country))]
+    public class CountryDTO : EntityDto
     {
-        [Required]
-        [StringLength(Country.MaxNameLength)]
         public string Name { get; set; }
-        [Required]
-        [StringLength(Country.MaxCodeLength)]
         public string CountryCode { get; set; }
     }
 }

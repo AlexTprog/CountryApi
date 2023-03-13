@@ -1,15 +1,16 @@
-﻿using Abp.Application.Services.Dto;
+﻿using Abp.Application.Services;
+using Abp.Application.Services.Dto;
 using Geor.Application.Dto;
 using System.Threading.Tasks;
 
 namespace Geor.Application
 {
-    public interface ICountryAppService
+    public interface ICountryAppService : IApplicationService
     {
-        Task<Country> Create(Country input);
-        Task Delete(int id);
-        Task<Country> Get(int id);
-        Task<ListResultDto<CountryListDto>> GetAll(string countryCode, int skipCount, int MaxResult);
-        Task<Country> Update(Country input);
+        Task<Country> Get(GetCountryDto input);
+        Task<Country> Create(CreateCountryDto input);
+        Task Delete(DeleteCountryDto input);
+        Task<Country> Update(UpdateCountryInput input);
+        Task<ListResultDto<CountryListDto>> GetAll(GetAllCountryDto input);
     }
 }

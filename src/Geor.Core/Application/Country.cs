@@ -1,10 +1,12 @@
 ﻿using Abp.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Geor.Application
 {
     [Table("Country")]
+    [Index(nameof(CountryCode), IsUnique = true)]
     public class Country : Entity
     {
         public const int MaxNameLength = 256;
@@ -13,8 +15,8 @@ namespace Geor.Application
         [Required]
         [StringLength(MaxNameLength)]
         public string Name { get; set; }
-        [Required]
 
+        [Required]
         [StringLength(MaxCodeLength)]
         public string CountryCode { get; set; }
 

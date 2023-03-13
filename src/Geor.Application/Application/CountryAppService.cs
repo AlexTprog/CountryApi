@@ -1,12 +1,15 @@
-﻿using Abp.Application.Services.Dto;
-using Abp.Collections.Extensions;
+﻿using Abp.Application.Services;
+using Abp.Application.Services.Dto;
 using Abp.Domain.Repositories;
 using Abp.Extensions;
+using Abp.UI;
 using Geor.Application.Dto;
+using Microsoft.AspNetCore.SignalR.Protocol;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace Geor.Application
@@ -20,61 +23,54 @@ namespace Geor.Application
             _countryRepository = countryRepository;
         }
 
-
-        public async Task<Country> Create(Country input)
+        public async Task<Country> Create(CreateCountryDto input)
         {
-            var countries = await _countryRepository.InsertAsync(input);
-
-            return countries;
-        }
-
-        public async Task Delete(int id)
-        {
-            var country = await _countryRepository.GetAsync(id);
-
-            if (country == null)
-            {
-                throw new ArgumentException($"Country with Id={id} not found");
-            }
-
-            await _countryRepository.DeleteAsync(country);
-        }
-
-
-        public async Task<Country> Get(int id)
-        {
-            var country = await _countryRepository.GetAsync(id);
+            var country = await _countryRepository.InsertAsync(new Country(input.Name, input.CountryCode));
 
             return country;
         }
 
-
-        public async Task<ListResultDto<CountryListDto>> GetAll(string countryCode, int skipCount = 0, int MaxResult = 10)
+        public async Task Delete(DeleteCountryDto input)
         {
-            var countries = _countryRepository.GetAll();
-            if (!countryCode.IsNullOrEmpty())
+            var country = await _countryRepository.GetAsync(input.Id);
+
+            if (country == null)
             {
-                countries = countries.Where(t => t.CountryCode.Contains(countryCode));
+                throw new UserFriendlyException($"Country with Id={input.Id} not found.");
             }
 
-            var result = await countries.Skip(skipCount).Take(MaxResult).ToListAsync();
+            await _countryRepository.DeleteAsync(country);
+
+        }
+
+        public async Task<Country> Get(GetCountryDto input)
+        {
+            var country = await _countryRepository.GetAsync(input.Id);
+            return country;
+        }
+
+        public async Task<ListResultDto<CountryListDto>> GetAll(GetAllCountryDto input)
+        {
+            var countries = _countryRepository.GetAll();
+            if (!input.CountryCode.IsNullOrEmpty())
+            {
+                countries = countries.Where(t => t.CountryCode.Contains(input.CountryCode));
+            }
+
+            var result = await countries.Skip(input.SkipCount).Take(input.MaxResultCount).ToListAsync();
 
             return new ListResultDto<CountryListDto>(ObjectMapper.Map<List<CountryListDto>>(result));
         }
 
-        public async Task<Country> Update(Country input)
+        public async Task<Country> Update(UpdateCountryInput input)
         {
             var country = await _countryRepository.GetAsync(input.Id);
             if (country == null)
             {
-                throw new ArgumentException($"Country with Id: {input.Id} not found");
+                throw new UserFriendlyException($"Country with Id={input.Id} not found.");
             }
-            country.Name = input.Name;
-            country.CountryCode = input.CountryCode;
-
-            var updateCountry = await _countryRepository.UpdateAsync(country);
-
-            return updateCountry;
+            var edit = await _countryRepository.UpdateAsync(country);
+            return edit;
         }
     }
 }

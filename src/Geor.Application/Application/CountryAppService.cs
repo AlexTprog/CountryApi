@@ -11,14 +11,38 @@ using System.Threading.Tasks;
 
 namespace Geor.Application
 {
-    public class CountryAppService : AsyncCrudAppService<Country, CountryDTO>
+    public class CountryAppService : IApplicationService, ICountryAppService
     {
         private readonly IRepository<Country> _countryRepository;
 
-        public CountryAppService(IRepository<Country> countryRepository) : base(countryRepository)
+        public CountryAppService(IRepository<Country> countryRepository)
         {
             _countryRepository = countryRepository;
         }
 
+        public Task<Country> Create(CreateCountryInput input)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Country> Delete(DeleteCountryInput input)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Country> Get(GetCountryInput input)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Country> GetAll(GetAllCountryInput input)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Country> Update(UpdateCountryInput input)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

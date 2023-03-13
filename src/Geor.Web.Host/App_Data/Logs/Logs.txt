@@ -26989,3 +26989,856 @@ FROM `AbpBackgroundJobs` AS `a`
 WHERE NOT (`a`.`IsAbandoned`) AND (`a`.`NextTryTime` <= @__Now_0)
 ORDER BY `a`.`Priority` DESC, `a`.`TryCount`, `a`.`NextTryTime`
 LIMIT @__p_1
+DEBUG 2023-03-13 13:24:55,467 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2023-03-13 13:24:55,607 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2023-03-13 13:24:55,621 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Geor.Web.Host.Startup.GeorWebHostModule, Geor.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 13:24:55,622 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Geor.GeorWebCoreModule, Geor.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 13:24:55,623 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Geor.GeorApplicationModule, Geor.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 13:24:55,623 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Geor.GeorCoreModule, Geor.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 13:24:55,623 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 13:24:55,623 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 13:24:55,624 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 13:24:55,624 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 13:24:55,624 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Geor.EntityFrameworkCore.GeorEntityFrameworkModule, Geor.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 13:24:55,625 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 13:24:55,625 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 13:24:55,626 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 13:24:55,626 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 13:24:55,626 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 13:24:55,626 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 13:24:55,628 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2023-03-13 13:24:55,715 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2023-03-13 13:24:55,715 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2023-03-13 13:24:55,715 [1    ] o.Configuration.LanguageManagementConfig - Converted Geor (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2023-03-13 13:24:55,715 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2023-03-13 13:24:56,027 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: Geor.EntityFrameworkCore.GeorDbContext, Geor.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 13:24:56,178 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2023-03-13 13:24:56,234 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2023-03-13 13:24:56,285 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2023-03-13 13:24:56,307 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Geor
+DEBUG 2023-03-13 13:24:56,336 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2023-03-13 13:24:56,341 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2023-03-13 13:24:56,348 [1    ] , Culture=neutral, PublicKeyToken=null]] - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[Geor.MultiTenancy.Tenant, Geor.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Geor.Authorization.Users.User, Geor.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2023-03-13 13:24:56,372 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 9 classes define auto mapping attributes
+DEBUG 2023-03-13 13:24:56,372 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Geor.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2023-03-13 13:24:56,374 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Geor.Users.Dto.CreateUserDto
+DEBUG 2023-03-13 13:24:56,375 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Geor.Users.Dto.UserDto
+DEBUG 2023-03-13 13:24:56,375 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Geor.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2023-03-13 13:24:56,375 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Geor.Sessions.Dto.UserLoginInfoDto
+DEBUG 2023-03-13 13:24:56,375 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Geor.Roles.Dto.PermissionDto
+DEBUG 2023-03-13 13:24:56,375 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Geor.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2023-03-13 13:24:56,375 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Geor.MultiTenancy.Dto.TenantDto
+DEBUG 2023-03-13 13:24:56,375 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Geor.Application.Dto.CountryDTO
+INFO  2023-03-13 13:24:58,167 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`DeleterUserId`, `a`.`DeletionTime`, `a`.`DisplayName`, `a`.`IsDeleted`, `a`.`LastModificationTime`, `a`.`LastModifierUserId`, `a`.`Name`
+FROM `AbpEditions` AS `a`
+WHERE `a`.`Name` = 'Standard'
+LIMIT 1
+INFO  2023-03-13 13:24:58,303 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (33ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpLanguages` AS `a`
+    WHERE `a`.`TenantId` IS NULL AND (`a`.`Name` = @__language_Name_1))
+INFO  2023-03-13 13:24:58,309 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpLanguages` AS `a`
+    WHERE `a`.`TenantId` IS NULL AND (`a`.`Name` = @__language_Name_1))
+INFO  2023-03-13 13:24:58,312 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpLanguages` AS `a`
+    WHERE `a`.`TenantId` IS NULL AND (`a`.`Name` = @__language_Name_1))
+INFO  2023-03-13 13:24:58,316 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpLanguages` AS `a`
+    WHERE `a`.`TenantId` IS NULL AND (`a`.`Name` = @__language_Name_1))
+INFO  2023-03-13 13:24:58,319 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpLanguages` AS `a`
+    WHERE `a`.`TenantId` IS NULL AND (`a`.`Name` = @__language_Name_1))
+INFO  2023-03-13 13:24:58,322 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpLanguages` AS `a`
+    WHERE `a`.`TenantId` IS NULL AND (`a`.`Name` = @__language_Name_1))
+INFO  2023-03-13 13:24:58,325 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpLanguages` AS `a`
+    WHERE `a`.`TenantId` IS NULL AND (`a`.`Name` = @__language_Name_1))
+INFO  2023-03-13 13:24:58,327 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpLanguages` AS `a`
+    WHERE `a`.`TenantId` IS NULL AND (`a`.`Name` = @__language_Name_1))
+INFO  2023-03-13 13:24:58,330 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpLanguages` AS `a`
+    WHERE `a`.`TenantId` IS NULL AND (`a`.`Name` = @__language_Name_1))
+INFO  2023-03-13 13:24:58,334 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpLanguages` AS `a`
+    WHERE `a`.`TenantId` IS NULL AND (`a`.`Name` = @__language_Name_1))
+INFO  2023-03-13 13:24:58,336 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpLanguages` AS `a`
+    WHERE `a`.`TenantId` IS NULL AND (`a`.`Name` = @__language_Name_1))
+INFO  2023-03-13 13:24:58,340 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpLanguages` AS `a`
+    WHERE `a`.`TenantId` IS NULL AND (`a`.`Name` = @__language_Name_1))
+INFO  2023-03-13 13:24:58,342 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpLanguages` AS `a`
+    WHERE `a`.`TenantId` IS NULL AND (`a`.`Name` = @__language_Name_1))
+INFO  2023-03-13 13:24:58,355 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`ConcurrencyStamp`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`DeleterUserId`, `a`.`DeletionTime`, `a`.`Description`, `a`.`DisplayName`, `a`.`IsDefault`, `a`.`IsDeleted`, `a`.`IsStatic`, `a`.`LastModificationTime`, `a`.`LastModifierUserId`, `a`.`Name`, `a`.`NormalizedName`, `a`.`TenantId`
+FROM `AbpRoles` AS `a`
+WHERE `a`.`TenantId` IS NULL AND (`a`.`Name` = 'Admin')
+LIMIT 1
+INFO  2023-03-13 13:24:58,413 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__adminRoleForHost_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Name`
+FROM `AbpPermissions` AS `a`
+WHERE (`a`.`Discriminator` = 'RolePermissionSetting') AND (`a`.`TenantId` IS NULL AND (`a`.`RoleId` = @__adminRoleForHost_Id_0))
+INFO  2023-03-13 13:24:58,425 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`AccessFailedCount`, `a`.`AuthenticationSource`, `a`.`ConcurrencyStamp`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`DeleterUserId`, `a`.`DeletionTime`, `a`.`EmailAddress`, `a`.`EmailConfirmationCode`, `a`.`IsActive`, `a`.`IsDeleted`, `a`.`IsEmailConfirmed`, `a`.`IsLockoutEnabled`, `a`.`IsPhoneNumberConfirmed`, `a`.`IsTwoFactorEnabled`, `a`.`LastModificationTime`, `a`.`LastModifierUserId`, `a`.`LockoutEndDateUtc`, `a`.`Name`, `a`.`NormalizedEmailAddress`, `a`.`NormalizedUserName`, `a`.`Password`, `a`.`PasswordResetCode`, `a`.`PhoneNumber`, `a`.`SecurityStamp`, `a`.`Surname`, `a`.`TenantId`, `a`.`UserName`
+FROM `AbpUsers` AS `a`
+WHERE `a`.`TenantId` IS NULL AND (`a`.`UserName` = 'admin')
+LIMIT 1
+INFO  2023-03-13 13:24:58,502 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__name_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpSettings` AS `a`
+    WHERE ((`a`.`Name` = @__name_0) AND `a`.`TenantId` IS NULL) AND `a`.`UserId` IS NULL)
+INFO  2023-03-13 13:24:58,506 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__name_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpSettings` AS `a`
+    WHERE ((`a`.`Name` = @__name_0) AND `a`.`TenantId` IS NULL) AND `a`.`UserId` IS NULL)
+INFO  2023-03-13 13:24:58,509 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__name_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpSettings` AS `a`
+    WHERE ((`a`.`Name` = @__name_0) AND `a`.`TenantId` IS NULL) AND `a`.`UserId` IS NULL)
+INFO  2023-03-13 13:24:58,565 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`ConnectionString`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`DeleterUserId`, `a`.`DeletionTime`, `a`.`EditionId`, `a`.`IsActive`, `a`.`IsDeleted`, `a`.`LastModificationTime`, `a`.`LastModifierUserId`, `a`.`Name`, `a`.`TenancyName`
+FROM `AbpTenants` AS `a`
+WHERE `a`.`TenancyName` = 'Default'
+LIMIT 1
+INFO  2023-03-13 13:24:58,595 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@___tenantId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`ConcurrencyStamp`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`DeleterUserId`, `a`.`DeletionTime`, `a`.`Description`, `a`.`DisplayName`, `a`.`IsDefault`, `a`.`IsDeleted`, `a`.`IsStatic`, `a`.`LastModificationTime`, `a`.`LastModifierUserId`, `a`.`Name`, `a`.`NormalizedName`, `a`.`TenantId`
+FROM `AbpRoles` AS `a`
+WHERE (`a`.`TenantId` = @___tenantId_0) AND (`a`.`Name` = 'Admin')
+LIMIT 1
+INFO  2023-03-13 13:24:58,601 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@___tenantId_0='?' (DbType = Int32), @__adminRole_Id_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Name`
+FROM `AbpPermissions` AS `a`
+WHERE (`a`.`Discriminator` = 'RolePermissionSetting') AND ((`a`.`TenantId` = @___tenantId_0) AND (`a`.`RoleId` = @__adminRole_Id_1))
+INFO  2023-03-13 13:24:58,610 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@___tenantId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`AccessFailedCount`, `a`.`AuthenticationSource`, `a`.`ConcurrencyStamp`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`DeleterUserId`, `a`.`DeletionTime`, `a`.`EmailAddress`, `a`.`EmailConfirmationCode`, `a`.`IsActive`, `a`.`IsDeleted`, `a`.`IsEmailConfirmed`, `a`.`IsLockoutEnabled`, `a`.`IsPhoneNumberConfirmed`, `a`.`IsTwoFactorEnabled`, `a`.`LastModificationTime`, `a`.`LastModifierUserId`, `a`.`LockoutEndDateUtc`, `a`.`Name`, `a`.`NormalizedEmailAddress`, `a`.`NormalizedUserName`, `a`.`Password`, `a`.`PasswordResetCode`, `a`.`PhoneNumber`, `a`.`SecurityStamp`, `a`.`Surname`, `a`.`TenantId`, `a`.`UserName`
+FROM `AbpUsers` AS `a`
+WHERE (`a`.`TenantId` = @___tenantId_0) AND (`a`.`UserName` = 'admin')
+LIMIT 1
+INFO  2023-03-13 13:24:58,711 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__ef_filter__p_0='?' (DbType = Boolean), @__ef_filter__p_1='?' (DbType = Boolean)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`DeleterUserId`, `a`.`DeletionTime`, `a`.`DisplayName`, `a`.`Icon`, `a`.`IsDeleted`, `a`.`IsDisabled`, `a`.`LastModificationTime`, `a`.`LastModifierUserId`, `a`.`Name`, `a`.`TenantId`
+FROM `AbpLanguages` AS `a`
+WHERE (@__ef_filter__p_0 OR NOT (`a`.`IsDeleted`)) AND (@__ef_filter__p_1 OR (`a`.`TenantId` IS NULL))
+INFO  2023-03-13 13:24:58,800 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__ef_filter__p_0='?' (DbType = Boolean)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`LastModificationTime`, `a`.`LastModifierUserId`, `a`.`Name`, `a`.`TenantId`, `a`.`UserId`, `a`.`Value`
+FROM `AbpSettings` AS `a`
+WHERE (@__ef_filter__p_0 OR (`a`.`TenantId` IS NULL)) AND (`a`.`UserId` IS NULL AND (`a`.`TenantId` IS NULL))
+INFO  2023-03-13 13:24:58,833 [1    ] tCore.Builder.RequestLocalizationOptions - Supported Request Localization Cultures: en,es-MX,fr,de,it,nl,pt-BR,tr,ru,ar,fa,ja,zh-Hans
+INFO  2023-03-13 13:24:59,107 [1    ] Microsoft.Hosting.Lifetime               - Application started. Press Ctrl+C to shut down.
+INFO  2023-03-13 13:24:59,109 [1    ] Microsoft.Hosting.Lifetime               - Hosting environment: Development
+INFO  2023-03-13 13:24:59,110 [1    ] Microsoft.Hosting.Lifetime               - Content root path: C:\Users\Alex\Desktop\GeorProjects\Geor\8.0.0\aspnet-core\src\Geor.Web.Host
+INFO  2023-03-13 13:24:59,134 [6    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/ - -
+INFO  2023-03-13 13:24:59,256 [6    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Geor.Web.Host.Controllers.HomeController.Index (Geor.Web.Host)'
+INFO  2023-03-13 13:24:59,319 [6    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Geor.Web.Host.Controllers.HomeController (Geor.Web.Host).
+INFO  2023-03-13 13:24:59,522 [8    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (11ms) [Parameters=[@p0='?' (Size = 512), @p1='?' (Size = 64), @p2='?' (Size = 128), @p3='?' (Size = 2000), @p4='?' (Size = 2000), @p5='?' (Size = 1024), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime), @p8='?' (DbType = Int32), @p9='?' (DbType = Int64), @p10='?' (Size = 256), @p11='?' (Size = 1024), @p12='?' (Size = 4000), @p13='?' (Size = 256), @p14='?' (DbType = Int32), @p15='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `AbpAuditLogs` (`BrowserInfo`, `ClientIpAddress`, `ClientName`, `CustomData`, `Exception`, `ExceptionMessage`, `ExecutionDuration`, `ExecutionTime`, `ImpersonatorTenantId`, `ImpersonatorUserId`, `MethodName`, `Parameters`, `ReturnValue`, `ServiceName`, `TenantId`, `UserId`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+SELECT `Id`
+FROM `AbpAuditLogs`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+INFO  2023-03-13 13:24:59,573 [6    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2023-03-13 13:24:59,582 [6    ] c.Infrastructure.ControllerActionInvoker - Executed action Geor.Web.Host.Controllers.HomeController.Index (Geor.Web.Host) in 256.0903ms
+INFO  2023-03-13 13:24:59,585 [6    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Geor.Web.Host.Controllers.HomeController.Index (Geor.Web.Host)'
+INFO  2023-03-13 13:24:59,607 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/swagger/index.html - -
+INFO  2023-03-13 13:24:59,617 [6    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/ - - - 302 - - 484.3930ms
+INFO  2023-03-13 13:24:59,778 [6    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/swagger/index.html - - - 200 - text/html;charset=utf-8 169.9574ms
+INFO  2023-03-13 13:24:59,782 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/_framework/aspnetcore-browser-refresh.js - -
+INFO  2023-03-13 13:24:59,789 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/_vs/browserLink - -
+INFO  2023-03-13 13:24:59,798 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 12.4272ms
+INFO  2023-03-13 13:24:59,833 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 40.2327ms
+INFO  2023-03-13 13:24:59,865 [6    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/AntiForgery/SetCookie - -
+INFO  2023-03-13 13:24:59,872 [6    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Geor.Web.Host.Controllers.AntiForgeryController.SetCookie (Geor.Web.Host)'
+INFO  2023-03-13 13:24:59,895 [6    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "SetCookie", controller = "AntiForgery", area = ""}. Executing controller action with signature Void SetCookie() on controller Geor.Web.Host.Controllers.AntiForgeryController (Geor.Web.Host).
+INFO  2023-03-13 13:24:59,909 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/swagger/v1/swagger.json - -
+INFO  2023-03-13 13:25:00,004 [12   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 512), @p1='?' (Size = 64), @p2='?' (Size = 128), @p3='?' (Size = 2000), @p4='?' (Size = 2000), @p5='?' (Size = 1024), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime), @p8='?' (DbType = Int32), @p9='?' (DbType = Int64), @p10='?' (Size = 256), @p11='?' (Size = 1024), @p12='?' (Size = 4000), @p13='?' (Size = 256), @p14='?' (DbType = Int32), @p15='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `AbpAuditLogs` (`BrowserInfo`, `ClientIpAddress`, `ClientName`, `CustomData`, `Exception`, `ExceptionMessage`, `ExecutionDuration`, `ExecutionTime`, `ImpersonatorTenantId`, `ImpersonatorUserId`, `MethodName`, `Parameters`, `ReturnValue`, `ServiceName`, `TenantId`, `UserId`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+SELECT `Id`
+FROM `AbpAuditLogs`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+INFO  2023-03-13 13:25:00,022 [6    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2023-03-13 13:25:00,131 [6    ] c.Infrastructure.ControllerActionInvoker - Executed action Geor.Web.Host.Controllers.AntiForgeryController.SetCookie (Geor.Web.Host) in 233.8094ms
+INFO  2023-03-13 13:25:00,133 [6    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Geor.Web.Host.Controllers.AntiForgeryController.SetCookie (Geor.Web.Host)'
+INFO  2023-03-13 13:25:00,138 [6    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/AntiForgery/SetCookie - - - 200 101 application/json;+charset=utf-8 272.6505ms
+INFO  2023-03-13 13:25:00,160 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 250.3300ms
+INFO  2023-03-13 13:25:01,366 [4    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`IsAbandoned`, `a`.`JobArgs`, `a`.`JobType`, `a`.`LastTryTime`, `a`.`NextTryTime`, `a`.`Priority`, `a`.`TryCount`
+FROM `AbpBackgroundJobs` AS `a`
+WHERE NOT (`a`.`IsAbandoned`) AND (`a`.`NextTryTime` <= @__Now_0)
+ORDER BY `a`.`Priority` DESC, `a`.`TryCount`, `a`.`NextTryTime`
+LIMIT @__p_1
+INFO  2023-03-13 13:25:06,377 [4    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`IsAbandoned`, `a`.`JobArgs`, `a`.`JobType`, `a`.`LastTryTime`, `a`.`NextTryTime`, `a`.`Priority`, `a`.`TryCount`
+FROM `AbpBackgroundJobs` AS `a`
+WHERE NOT (`a`.`IsAbandoned`) AND (`a`.`NextTryTime` <= @__Now_0)
+ORDER BY `a`.`Priority` DESC, `a`.`TryCount`, `a`.`NextTryTime`
+LIMIT @__p_1
+INFO  2023-03-13 13:25:11,384 [4    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`IsAbandoned`, `a`.`JobArgs`, `a`.`JobType`, `a`.`LastTryTime`, `a`.`NextTryTime`, `a`.`Priority`, `a`.`TryCount`
+FROM `AbpBackgroundJobs` AS `a`
+WHERE NOT (`a`.`IsAbandoned`) AND (`a`.`NextTryTime` <= @__Now_0)
+ORDER BY `a`.`Priority` DESC, `a`.`TryCount`, `a`.`NextTryTime`
+LIMIT @__p_1
+INFO  2023-03-13 13:25:16,268 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:44311/api/services/app/Country/Create application/json-patch+json 61
+INFO  2023-03-13 13:25:16,274 [4    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2023-03-13 13:25:16,277 [4    ] pNetCore.Cors.Infrastructure.CorsService - Request origin https://localhost:44311 does not have permission to access the resource.
+INFO  2023-03-13 13:25:16,282 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Geor.Application.CountryAppService.CreateAsync (Geor.Application)'
+INFO  2023-03-13 13:25:16,298 [4    ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "Create", controller = "Country"}. Executing controller action with signature System.Threading.Tasks.Task`1[Geor.Application.Dto.CountryDTO] CreateAsync(Geor.Application.Dto.CountryDTO) on controller Geor.Application.CountryAppService (Geor.Application).
+INFO  2023-03-13 13:25:16,399 [6    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`IsAbandoned`, `a`.`JobArgs`, `a`.`JobType`, `a`.`LastTryTime`, `a`.`NextTryTime`, `a`.`Priority`, `a`.`TryCount`
+FROM `AbpBackgroundJobs` AS `a`
+WHERE NOT (`a`.`IsAbandoned`) AND (`a`.`NextTryTime` <= @__Now_0)
+ORDER BY `a`.`Priority` DESC, `a`.`TryCount`, `a`.`NextTryTime`
+LIMIT @__p_1
+INFO  2023-03-13 13:25:16,417 [6    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 3), @p1='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `Country` (`CountryCode`, `Name`)
+VALUES (@p0, @p1);
+SELECT `Id`
+FROM `Country`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+INFO  2023-03-13 13:25:16,441 [6    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 512), @p1='?' (Size = 64), @p2='?' (Size = 128), @p3='?' (Size = 2000), @p4='?' (Size = 2000), @p5='?' (Size = 1024), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime), @p8='?' (DbType = Int32), @p9='?' (DbType = Int64), @p10='?' (Size = 256), @p11='?' (Size = 1024), @p12='?' (Size = 4000), @p13='?' (Size = 256), @p14='?' (DbType = Int32), @p15='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `AbpAuditLogs` (`BrowserInfo`, `ClientIpAddress`, `ClientName`, `CustomData`, `Exception`, `ExceptionMessage`, `ExecutionDuration`, `ExecutionTime`, `ImpersonatorTenantId`, `ImpersonatorUserId`, `MethodName`, `Parameters`, `ReturnValue`, `ServiceName`, `TenantId`, `UserId`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+SELECT `Id`
+FROM `AbpAuditLogs`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+INFO  2023-03-13 13:25:16,447 [4    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2023-03-13 13:25:16,452 [4    ] c.Infrastructure.ControllerActionInvoker - Executed action Geor.Application.CountryAppService.CreateAsync (Geor.Application) in 152.5218ms
+INFO  2023-03-13 13:25:16,454 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Geor.Application.CountryAppService.CreateAsync (Geor.Application)'
+INFO  2023-03-13 13:25:16,457 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:44311/api/services/app/Country/Create application/json-patch+json 61 - 200 146 application/json;+charset=utf-8 190.4256ms
+INFO  2023-03-13 13:25:21,410 [12   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`IsAbandoned`, `a`.`JobArgs`, `a`.`JobType`, `a`.`LastTryTime`, `a`.`NextTryTime`, `a`.`Priority`, `a`.`TryCount`
+FROM `AbpBackgroundJobs` AS `a`
+WHERE NOT (`a`.`IsAbandoned`) AND (`a`.`NextTryTime` <= @__Now_0)
+ORDER BY `a`.`Priority` DESC, `a`.`TryCount`, `a`.`NextTryTime`
+LIMIT @__p_1
+INFO  2023-03-13 13:25:26,419 [12   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`IsAbandoned`, `a`.`JobArgs`, `a`.`JobType`, `a`.`LastTryTime`, `a`.`NextTryTime`, `a`.`Priority`, `a`.`TryCount`
+FROM `AbpBackgroundJobs` AS `a`
+WHERE NOT (`a`.`IsAbandoned`) AND (`a`.`NextTryTime` <= @__Now_0)
+ORDER BY `a`.`Priority` DESC, `a`.`TryCount`, `a`.`NextTryTime`
+LIMIT @__p_1
+INFO  2023-03-13 13:25:31,426 [12   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`IsAbandoned`, `a`.`JobArgs`, `a`.`JobType`, `a`.`LastTryTime`, `a`.`NextTryTime`, `a`.`Priority`, `a`.`TryCount`
+FROM `AbpBackgroundJobs` AS `a`
+WHERE NOT (`a`.`IsAbandoned`) AND (`a`.`NextTryTime` <= @__Now_0)
+ORDER BY `a`.`Priority` DESC, `a`.`TryCount`, `a`.`NextTryTime`
+LIMIT @__p_1
+INFO  2023-03-13 13:25:36,433 [12   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`IsAbandoned`, `a`.`JobArgs`, `a`.`JobType`, `a`.`LastTryTime`, `a`.`NextTryTime`, `a`.`Priority`, `a`.`TryCount`
+FROM `AbpBackgroundJobs` AS `a`
+WHERE NOT (`a`.`IsAbandoned`) AND (`a`.`NextTryTime` <= @__Now_0)
+ORDER BY `a`.`Priority` DESC, `a`.`TryCount`, `a`.`NextTryTime`
+LIMIT @__p_1
+INFO  2023-03-13 13:25:41,444 [12   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`IsAbandoned`, `a`.`JobArgs`, `a`.`JobType`, `a`.`LastTryTime`, `a`.`NextTryTime`, `a`.`Priority`, `a`.`TryCount`
+FROM `AbpBackgroundJobs` AS `a`
+WHERE NOT (`a`.`IsAbandoned`) AND (`a`.`NextTryTime` <= @__Now_0)
+ORDER BY `a`.`Priority` DESC, `a`.`TryCount`, `a`.`NextTryTime`
+LIMIT @__p_1
+INFO  2023-03-13 13:25:46,134 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 DELETE https://localhost:44311/api/services/app/Country/Delete?Id=25 - -
+INFO  2023-03-13 13:25:46,138 [4    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2023-03-13 13:25:46,140 [4    ] pNetCore.Cors.Infrastructure.CorsService - Request origin https://localhost:44311 does not have permission to access the resource.
+INFO  2023-03-13 13:25:46,150 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Geor.Application.CountryAppService.DeleteAsync (Geor.Application)'
+INFO  2023-03-13 13:25:46,162 [4    ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "Delete", controller = "Country"}. Executing controller action with signature System.Threading.Tasks.Task DeleteAsync(Abp.Application.Services.Dto.EntityDto`1[System.Int32]) on controller Geor.Application.CountryAppService (Geor.Application).
+INFO  2023-03-13 13:25:46,194 [4    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`CountryCode`, `c`.`Name`
+FROM `Country` AS `c`
+WHERE `c`.`Id` = @__p_0
+LIMIT 1
+INFO  2023-03-13 13:25:46,222 [9    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (9ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET AUTOCOMMIT = 1;
+DELETE FROM `Country`
+WHERE `Id` = @p0;
+SELECT ROW_COUNT();
+INFO  2023-03-13 13:25:46,241 [9    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 512), @p1='?' (Size = 64), @p2='?' (Size = 128), @p3='?' (Size = 2000), @p4='?' (Size = 2000), @p5='?' (Size = 1024), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime), @p8='?' (DbType = Int32), @p9='?' (DbType = Int64), @p10='?' (Size = 256), @p11='?' (Size = 1024), @p12='?' (Size = 4000), @p13='?' (Size = 256), @p14='?' (DbType = Int32), @p15='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `AbpAuditLogs` (`BrowserInfo`, `ClientIpAddress`, `ClientName`, `CustomData`, `Exception`, `ExceptionMessage`, `ExecutionDuration`, `ExecutionTime`, `ImpersonatorTenantId`, `ImpersonatorUserId`, `MethodName`, `Parameters`, `ReturnValue`, `ServiceName`, `TenantId`, `UserId`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+SELECT `Id`
+FROM `AbpAuditLogs`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+INFO  2023-03-13 13:25:46,250 [21   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2023-03-13 13:25:46,252 [21   ] c.Infrastructure.ControllerActionInvoker - Executed action Geor.Application.CountryAppService.DeleteAsync (Geor.Application) in 87.924ms
+INFO  2023-03-13 13:25:46,255 [21   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Geor.Application.CountryAppService.DeleteAsync (Geor.Application)'
+INFO  2023-03-13 13:25:46,257 [21   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 DELETE https://localhost:44311/api/services/app/Country/Delete?Id=25 - - - 200 101 application/json;+charset=utf-8 123.4462ms
+INFO  2023-03-13 13:25:46,450 [21   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`IsAbandoned`, `a`.`JobArgs`, `a`.`JobType`, `a`.`LastTryTime`, `a`.`NextTryTime`, `a`.`Priority`, `a`.`TryCount`
+FROM `AbpBackgroundJobs` AS `a`
+WHERE NOT (`a`.`IsAbandoned`) AND (`a`.`NextTryTime` <= @__Now_0)
+ORDER BY `a`.`Priority` DESC, `a`.`TryCount`, `a`.`NextTryTime`
+LIMIT @__p_1
+INFO  2023-03-13 13:25:51,458 [21   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`IsAbandoned`, `a`.`JobArgs`, `a`.`JobType`, `a`.`LastTryTime`, `a`.`NextTryTime`, `a`.`Priority`, `a`.`TryCount`
+FROM `AbpBackgroundJobs` AS `a`
+WHERE NOT (`a`.`IsAbandoned`) AND (`a`.`NextTryTime` <= @__Now_0)
+ORDER BY `a`.`Priority` DESC, `a`.`TryCount`, `a`.`NextTryTime`
+LIMIT @__p_1
+INFO  2023-03-13 13:25:56,463 [4    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`IsAbandoned`, `a`.`JobArgs`, `a`.`JobType`, `a`.`LastTryTime`, `a`.`NextTryTime`, `a`.`Priority`, `a`.`TryCount`
+FROM `AbpBackgroundJobs` AS `a`
+WHERE NOT (`a`.`IsAbandoned`) AND (`a`.`NextTryTime` <= @__Now_0)
+ORDER BY `a`.`Priority` DESC, `a`.`TryCount`, `a`.`NextTryTime`
+LIMIT @__p_1
+INFO  2023-03-13 13:26:01,471 [6    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`IsAbandoned`, `a`.`JobArgs`, `a`.`JobType`, `a`.`LastTryTime`, `a`.`NextTryTime`, `a`.`Priority`, `a`.`TryCount`
+FROM `AbpBackgroundJobs` AS `a`
+WHERE NOT (`a`.`IsAbandoned`) AND (`a`.`NextTryTime` <= @__Now_0)
+ORDER BY `a`.`Priority` DESC, `a`.`TryCount`, `a`.`NextTryTime`
+LIMIT @__p_1
+INFO  2023-03-13 13:26:06,478 [6    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`IsAbandoned`, `a`.`JobArgs`, `a`.`JobType`, `a`.`LastTryTime`, `a`.`NextTryTime`, `a`.`Priority`, `a`.`TryCount`
+FROM `AbpBackgroundJobs` AS `a`
+WHERE NOT (`a`.`IsAbandoned`) AND (`a`.`NextTryTime` <= @__Now_0)
+ORDER BY `a`.`Priority` DESC, `a`.`TryCount`, `a`.`NextTryTime`
+LIMIT @__p_1
+DEBUG 2023-03-13 13:54:04,873 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2023-03-13 13:54:04,964 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2023-03-13 13:54:04,972 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Geor.Web.Host.Startup.GeorWebHostModule, Geor.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 13:54:04,973 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Geor.GeorWebCoreModule, Geor.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 13:54:04,974 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Geor.GeorApplicationModule, Geor.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 13:54:04,974 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Geor.GeorCoreModule, Geor.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 13:54:04,974 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 13:54:04,974 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 13:54:04,975 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 13:54:04,975 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 13:54:04,975 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Geor.EntityFrameworkCore.GeorEntityFrameworkModule, Geor.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 13:54:04,975 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 13:54:04,976 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 13:54:04,976 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 13:54:04,976 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 13:54:04,976 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 13:54:04,976 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 13:54:04,978 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2023-03-13 13:54:05,030 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2023-03-13 13:54:05,030 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2023-03-13 13:54:05,030 [1    ] o.Configuration.LanguageManagementConfig - Converted Geor (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2023-03-13 13:54:05,030 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2023-03-13 13:54:05,293 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: Geor.EntityFrameworkCore.GeorDbContext, Geor.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 13:54:05,407 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2023-03-13 13:54:05,465 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2023-03-13 13:54:05,515 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2023-03-13 13:54:05,536 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Geor
+DEBUG 2023-03-13 13:54:05,565 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2023-03-13 13:54:05,570 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2023-03-13 13:54:05,576 [1    ] , Culture=neutral, PublicKeyToken=null]] - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[Geor.MultiTenancy.Tenant, Geor.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Geor.Authorization.Users.User, Geor.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2023-03-13 13:54:05,598 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 13 classes define auto mapping attributes
+DEBUG 2023-03-13 13:54:05,598 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Geor.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2023-03-13 13:54:05,601 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Geor.Users.Dto.CreateUserDto
+DEBUG 2023-03-13 13:54:05,602 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Geor.Users.Dto.UserDto
+DEBUG 2023-03-13 13:54:05,602 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Geor.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2023-03-13 13:54:05,602 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Geor.Sessions.Dto.UserLoginInfoDto
+DEBUG 2023-03-13 13:54:05,602 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Geor.Roles.Dto.PermissionDto
+DEBUG 2023-03-13 13:54:05,602 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Geor.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2023-03-13 13:54:05,602 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Geor.MultiTenancy.Dto.TenantDto
+DEBUG 2023-03-13 13:54:05,602 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Geor.Application.Dto.CountryDTO
+DEBUG 2023-03-13 13:54:05,603 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Geor.Application.Dto.CreateCountryInput
+DEBUG 2023-03-13 13:54:05,603 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Geor.Application.Dto.GetAllCountryInput
+DEBUG 2023-03-13 13:54:05,603 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Geor.Application.Dto.GetCountryInput
+DEBUG 2023-03-13 13:54:05,603 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Geor.Application.Dto.UpdateCountryInput
+INFO  2023-03-13 13:54:07,346 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`DeleterUserId`, `a`.`DeletionTime`, `a`.`DisplayName`, `a`.`IsDeleted`, `a`.`LastModificationTime`, `a`.`LastModifierUserId`, `a`.`Name`
+FROM `AbpEditions` AS `a`
+WHERE `a`.`Name` = 'Standard'
+LIMIT 1
+INFO  2023-03-13 13:54:07,476 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (30ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpLanguages` AS `a`
+    WHERE `a`.`TenantId` IS NULL AND (`a`.`Name` = @__language_Name_1))
+INFO  2023-03-13 13:54:07,482 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpLanguages` AS `a`
+    WHERE `a`.`TenantId` IS NULL AND (`a`.`Name` = @__language_Name_1))
+INFO  2023-03-13 13:54:07,485 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpLanguages` AS `a`
+    WHERE `a`.`TenantId` IS NULL AND (`a`.`Name` = @__language_Name_1))
+INFO  2023-03-13 13:54:07,487 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpLanguages` AS `a`
+    WHERE `a`.`TenantId` IS NULL AND (`a`.`Name` = @__language_Name_1))
+INFO  2023-03-13 13:54:07,490 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpLanguages` AS `a`
+    WHERE `a`.`TenantId` IS NULL AND (`a`.`Name` = @__language_Name_1))
+INFO  2023-03-13 13:54:07,493 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpLanguages` AS `a`
+    WHERE `a`.`TenantId` IS NULL AND (`a`.`Name` = @__language_Name_1))
+INFO  2023-03-13 13:54:07,495 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpLanguages` AS `a`
+    WHERE `a`.`TenantId` IS NULL AND (`a`.`Name` = @__language_Name_1))
+INFO  2023-03-13 13:54:07,497 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpLanguages` AS `a`
+    WHERE `a`.`TenantId` IS NULL AND (`a`.`Name` = @__language_Name_1))
+INFO  2023-03-13 13:54:07,500 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpLanguages` AS `a`
+    WHERE `a`.`TenantId` IS NULL AND (`a`.`Name` = @__language_Name_1))
+INFO  2023-03-13 13:54:07,502 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpLanguages` AS `a`
+    WHERE `a`.`TenantId` IS NULL AND (`a`.`Name` = @__language_Name_1))
+INFO  2023-03-13 13:54:07,505 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpLanguages` AS `a`
+    WHERE `a`.`TenantId` IS NULL AND (`a`.`Name` = @__language_Name_1))
+INFO  2023-03-13 13:54:07,507 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpLanguages` AS `a`
+    WHERE `a`.`TenantId` IS NULL AND (`a`.`Name` = @__language_Name_1))
+INFO  2023-03-13 13:54:07,510 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpLanguages` AS `a`
+    WHERE `a`.`TenantId` IS NULL AND (`a`.`Name` = @__language_Name_1))
+INFO  2023-03-13 13:54:07,520 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`ConcurrencyStamp`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`DeleterUserId`, `a`.`DeletionTime`, `a`.`Description`, `a`.`DisplayName`, `a`.`IsDefault`, `a`.`IsDeleted`, `a`.`IsStatic`, `a`.`LastModificationTime`, `a`.`LastModifierUserId`, `a`.`Name`, `a`.`NormalizedName`, `a`.`TenantId`
+FROM `AbpRoles` AS `a`
+WHERE `a`.`TenantId` IS NULL AND (`a`.`Name` = 'Admin')
+LIMIT 1
+INFO  2023-03-13 13:54:07,570 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__adminRoleForHost_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Name`
+FROM `AbpPermissions` AS `a`
+WHERE (`a`.`Discriminator` = 'RolePermissionSetting') AND (`a`.`TenantId` IS NULL AND (`a`.`RoleId` = @__adminRoleForHost_Id_0))
+INFO  2023-03-13 13:54:07,580 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`AccessFailedCount`, `a`.`AuthenticationSource`, `a`.`ConcurrencyStamp`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`DeleterUserId`, `a`.`DeletionTime`, `a`.`EmailAddress`, `a`.`EmailConfirmationCode`, `a`.`IsActive`, `a`.`IsDeleted`, `a`.`IsEmailConfirmed`, `a`.`IsLockoutEnabled`, `a`.`IsPhoneNumberConfirmed`, `a`.`IsTwoFactorEnabled`, `a`.`LastModificationTime`, `a`.`LastModifierUserId`, `a`.`LockoutEndDateUtc`, `a`.`Name`, `a`.`NormalizedEmailAddress`, `a`.`NormalizedUserName`, `a`.`Password`, `a`.`PasswordResetCode`, `a`.`PhoneNumber`, `a`.`SecurityStamp`, `a`.`Surname`, `a`.`TenantId`, `a`.`UserName`
+FROM `AbpUsers` AS `a`
+WHERE `a`.`TenantId` IS NULL AND (`a`.`UserName` = 'admin')
+LIMIT 1
+INFO  2023-03-13 13:54:07,657 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__name_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpSettings` AS `a`
+    WHERE ((`a`.`Name` = @__name_0) AND `a`.`TenantId` IS NULL) AND `a`.`UserId` IS NULL)
+INFO  2023-03-13 13:54:07,660 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__name_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpSettings` AS `a`
+    WHERE ((`a`.`Name` = @__name_0) AND `a`.`TenantId` IS NULL) AND `a`.`UserId` IS NULL)
+INFO  2023-03-13 13:54:07,662 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__name_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpSettings` AS `a`
+    WHERE ((`a`.`Name` = @__name_0) AND `a`.`TenantId` IS NULL) AND `a`.`UserId` IS NULL)
+INFO  2023-03-13 13:54:07,715 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`ConnectionString`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`DeleterUserId`, `a`.`DeletionTime`, `a`.`EditionId`, `a`.`IsActive`, `a`.`IsDeleted`, `a`.`LastModificationTime`, `a`.`LastModifierUserId`, `a`.`Name`, `a`.`TenancyName`
+FROM `AbpTenants` AS `a`
+WHERE `a`.`TenancyName` = 'Default'
+LIMIT 1
+INFO  2023-03-13 13:54:07,742 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@___tenantId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`ConcurrencyStamp`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`DeleterUserId`, `a`.`DeletionTime`, `a`.`Description`, `a`.`DisplayName`, `a`.`IsDefault`, `a`.`IsDeleted`, `a`.`IsStatic`, `a`.`LastModificationTime`, `a`.`LastModifierUserId`, `a`.`Name`, `a`.`NormalizedName`, `a`.`TenantId`
+FROM `AbpRoles` AS `a`
+WHERE (`a`.`TenantId` = @___tenantId_0) AND (`a`.`Name` = 'Admin')
+LIMIT 1
+INFO  2023-03-13 13:54:07,747 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@___tenantId_0='?' (DbType = Int32), @__adminRole_Id_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Name`
+FROM `AbpPermissions` AS `a`
+WHERE (`a`.`Discriminator` = 'RolePermissionSetting') AND ((`a`.`TenantId` = @___tenantId_0) AND (`a`.`RoleId` = @__adminRole_Id_1))
+INFO  2023-03-13 13:54:07,754 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@___tenantId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`AccessFailedCount`, `a`.`AuthenticationSource`, `a`.`ConcurrencyStamp`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`DeleterUserId`, `a`.`DeletionTime`, `a`.`EmailAddress`, `a`.`EmailConfirmationCode`, `a`.`IsActive`, `a`.`IsDeleted`, `a`.`IsEmailConfirmed`, `a`.`IsLockoutEnabled`, `a`.`IsPhoneNumberConfirmed`, `a`.`IsTwoFactorEnabled`, `a`.`LastModificationTime`, `a`.`LastModifierUserId`, `a`.`LockoutEndDateUtc`, `a`.`Name`, `a`.`NormalizedEmailAddress`, `a`.`NormalizedUserName`, `a`.`Password`, `a`.`PasswordResetCode`, `a`.`PhoneNumber`, `a`.`SecurityStamp`, `a`.`Surname`, `a`.`TenantId`, `a`.`UserName`
+FROM `AbpUsers` AS `a`
+WHERE (`a`.`TenantId` = @___tenantId_0) AND (`a`.`UserName` = 'admin')
+LIMIT 1
+INFO  2023-03-13 13:54:07,837 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__ef_filter__p_0='?' (DbType = Boolean), @__ef_filter__p_1='?' (DbType = Boolean)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`DeleterUserId`, `a`.`DeletionTime`, `a`.`DisplayName`, `a`.`Icon`, `a`.`IsDeleted`, `a`.`IsDisabled`, `a`.`LastModificationTime`, `a`.`LastModifierUserId`, `a`.`Name`, `a`.`TenantId`
+FROM `AbpLanguages` AS `a`
+WHERE (@__ef_filter__p_0 OR NOT (`a`.`IsDeleted`)) AND (@__ef_filter__p_1 OR (`a`.`TenantId` IS NULL))
+INFO  2023-03-13 13:54:07,918 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__ef_filter__p_0='?' (DbType = Boolean)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`LastModificationTime`, `a`.`LastModifierUserId`, `a`.`Name`, `a`.`TenantId`, `a`.`UserId`, `a`.`Value`
+FROM `AbpSettings` AS `a`
+WHERE (@__ef_filter__p_0 OR (`a`.`TenantId` IS NULL)) AND (`a`.`UserId` IS NULL AND (`a`.`TenantId` IS NULL))
+INFO  2023-03-13 13:54:07,946 [1    ] tCore.Builder.RequestLocalizationOptions - Supported Request Localization Cultures: en,es-MX,fr,de,it,nl,pt-BR,tr,ru,ar,fa,ja,zh-Hans
+INFO  2023-03-13 13:54:08,191 [1    ] Microsoft.Hosting.Lifetime               - Application started. Press Ctrl+C to shut down.
+INFO  2023-03-13 13:54:08,193 [1    ] Microsoft.Hosting.Lifetime               - Hosting environment: Development
+INFO  2023-03-13 13:54:08,194 [1    ] Microsoft.Hosting.Lifetime               - Content root path: C:\Users\Alex\Desktop\GeorProjects\Geor\8.0.0\aspnet-core\src\Geor.Web.Host
+INFO  2023-03-13 13:54:08,220 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/ - -
+INFO  2023-03-13 13:54:08,324 [9    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Geor.Web.Host.Controllers.HomeController.Index (Geor.Web.Host)'
+INFO  2023-03-13 13:54:08,359 [9    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Geor.Web.Host.Controllers.HomeController (Geor.Web.Host).
+INFO  2023-03-13 13:54:08,544 [6    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (10ms) [Parameters=[@p0='?' (Size = 512), @p1='?' (Size = 64), @p2='?' (Size = 128), @p3='?' (Size = 2000), @p4='?' (Size = 2000), @p5='?' (Size = 1024), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime), @p8='?' (DbType = Int32), @p9='?' (DbType = Int64), @p10='?' (Size = 256), @p11='?' (Size = 1024), @p12='?' (Size = 4000), @p13='?' (Size = 256), @p14='?' (DbType = Int32), @p15='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `AbpAuditLogs` (`BrowserInfo`, `ClientIpAddress`, `ClientName`, `CustomData`, `Exception`, `ExceptionMessage`, `ExecutionDuration`, `ExecutionTime`, `ImpersonatorTenantId`, `ImpersonatorUserId`, `MethodName`, `Parameters`, `ReturnValue`, `ServiceName`, `TenantId`, `UserId`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+SELECT `Id`
+FROM `AbpAuditLogs`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+INFO  2023-03-13 13:54:08,589 [4    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2023-03-13 13:54:08,596 [4    ] c.Infrastructure.ControllerActionInvoker - Executed action Geor.Web.Host.Controllers.HomeController.Index (Geor.Web.Host) in 231.4866ms
+INFO  2023-03-13 13:54:08,598 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Geor.Web.Host.Controllers.HomeController.Index (Geor.Web.Host)'
+INFO  2023-03-13 13:54:08,617 [6    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/swagger/index.html - -
+INFO  2023-03-13 13:54:08,624 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/ - - - 302 - - 406.4534ms
+INFO  2023-03-13 13:54:08,764 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/swagger/index.html - - - 200 - text/html;charset=utf-8 146.6804ms
+INFO  2023-03-13 13:54:08,776 [12   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/_framework/aspnetcore-browser-refresh.js - -
+INFO  2023-03-13 13:54:08,778 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/_vs/browserLink - -
+INFO  2023-03-13 13:54:08,794 [12   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 16.8780ms
+INFO  2023-03-13 13:54:08,825 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 46.6485ms
+INFO  2023-03-13 13:54:08,846 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/AntiForgery/SetCookie - -
+INFO  2023-03-13 13:54:08,851 [9    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Geor.Web.Host.Controllers.AntiForgeryController.SetCookie (Geor.Web.Host)'
+INFO  2023-03-13 13:54:08,868 [9    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "SetCookie", controller = "AntiForgery", area = ""}. Executing controller action with signature Void SetCookie() on controller Geor.Web.Host.Controllers.AntiForgeryController (Geor.Web.Host).
+INFO  2023-03-13 13:54:08,880 [6    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/swagger/v1/swagger.json - -
+INFO  2023-03-13 13:54:08,958 [12   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 512), @p1='?' (Size = 64), @p2='?' (Size = 128), @p3='?' (Size = 2000), @p4='?' (Size = 2000), @p5='?' (Size = 1024), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime), @p8='?' (DbType = Int32), @p9='?' (DbType = Int64), @p10='?' (Size = 256), @p11='?' (Size = 1024), @p12='?' (Size = 4000), @p13='?' (Size = 256), @p14='?' (DbType = Int32), @p15='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `AbpAuditLogs` (`BrowserInfo`, `ClientIpAddress`, `ClientName`, `CustomData`, `Exception`, `ExceptionMessage`, `ExecutionDuration`, `ExecutionTime`, `ImpersonatorTenantId`, `ImpersonatorUserId`, `MethodName`, `Parameters`, `ReturnValue`, `ServiceName`, `TenantId`, `UserId`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+SELECT `Id`
+FROM `AbpAuditLogs`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+INFO  2023-03-13 13:54:08,998 [4    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2023-03-13 13:54:09,085 [4    ] c.Infrastructure.ControllerActionInvoker - Executed action Geor.Web.Host.Controllers.AntiForgeryController.SetCookie (Geor.Web.Host) in 214.9659ms
+INFO  2023-03-13 13:54:09,087 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Geor.Web.Host.Controllers.AntiForgeryController.SetCookie (Geor.Web.Host)'
+INFO  2023-03-13 13:54:09,090 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/AntiForgery/SetCookie - - - 200 101 application/json;+charset=utf-8 243.4170ms
+INFO  2023-03-13 13:54:09,114 [6    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 234.3252ms
+INFO  2023-03-13 13:54:10,593 [20   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`IsAbandoned`, `a`.`JobArgs`, `a`.`JobType`, `a`.`LastTryTime`, `a`.`NextTryTime`, `a`.`Priority`, `a`.`TryCount`
+FROM `AbpBackgroundJobs` AS `a`
+WHERE NOT (`a`.`IsAbandoned`) AND (`a`.`NextTryTime` <= @__Now_0)
+ORDER BY `a`.`Priority` DESC, `a`.`TryCount`, `a`.`NextTryTime`
+LIMIT @__p_1
+INFO  2023-03-13 13:54:15,599 [20   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`IsAbandoned`, `a`.`JobArgs`, `a`.`JobType`, `a`.`LastTryTime`, `a`.`NextTryTime`, `a`.`Priority`, `a`.`TryCount`
+FROM `AbpBackgroundJobs` AS `a`
+WHERE NOT (`a`.`IsAbandoned`) AND (`a`.`NextTryTime` <= @__Now_0)
+ORDER BY `a`.`Priority` DESC, `a`.`TryCount`, `a`.`NextTryTime`
+LIMIT @__p_1
+INFO  2023-03-13 13:54:20,614 [20   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`IsAbandoned`, `a`.`JobArgs`, `a`.`JobType`, `a`.`LastTryTime`, `a`.`NextTryTime`, `a`.`Priority`, `a`.`TryCount`
+FROM `AbpBackgroundJobs` AS `a`
+WHERE NOT (`a`.`IsAbandoned`) AND (`a`.`NextTryTime` <= @__Now_0)
+ORDER BY `a`.`Priority` DESC, `a`.`TryCount`, `a`.`NextTryTime`
+LIMIT @__p_1
+INFO  2023-03-13 13:54:25,619 [9    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`IsAbandoned`, `a`.`JobArgs`, `a`.`JobType`, `a`.`LastTryTime`, `a`.`NextTryTime`, `a`.`Priority`, `a`.`TryCount`
+FROM `AbpBackgroundJobs` AS `a`
+WHERE NOT (`a`.`IsAbandoned`) AND (`a`.`NextTryTime` <= @__Now_0)
+ORDER BY `a`.`Priority` DESC, `a`.`TryCount`, `a`.`NextTryTime`
+LIMIT @__p_1
+INFO  2023-03-13 13:54:30,625 [24   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`IsAbandoned`, `a`.`JobArgs`, `a`.`JobType`, `a`.`LastTryTime`, `a`.`NextTryTime`, `a`.`Priority`, `a`.`TryCount`
+FROM `AbpBackgroundJobs` AS `a`
+WHERE NOT (`a`.`IsAbandoned`) AND (`a`.`NextTryTime` <= @__Now_0)
+ORDER BY `a`.`Priority` DESC, `a`.`TryCount`, `a`.`NextTryTime`
+LIMIT @__p_1
+INFO  2023-03-13 13:54:35,631 [9    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`IsAbandoned`, `a`.`JobArgs`, `a`.`JobType`, `a`.`LastTryTime`, `a`.`NextTryTime`, `a`.`Priority`, `a`.`TryCount`
+FROM `AbpBackgroundJobs` AS `a`
+WHERE NOT (`a`.`IsAbandoned`) AND (`a`.`NextTryTime` <= @__Now_0)
+ORDER BY `a`.`Priority` DESC, `a`.`TryCount`, `a`.`NextTryTime`
+LIMIT @__p_1
+INFO  2023-03-13 13:54:40,638 [9    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`IsAbandoned`, `a`.`JobArgs`, `a`.`JobType`, `a`.`LastTryTime`, `a`.`NextTryTime`, `a`.`Priority`, `a`.`TryCount`
+FROM `AbpBackgroundJobs` AS `a`
+WHERE NOT (`a`.`IsAbandoned`) AND (`a`.`NextTryTime` <= @__Now_0)
+ORDER BY `a`.`Priority` DESC, `a`.`TryCount`, `a`.`NextTryTime`
+LIMIT @__p_1
+INFO  2023-03-13 13:54:45,643 [24   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`IsAbandoned`, `a`.`JobArgs`, `a`.`JobType`, `a`.`LastTryTime`, `a`.`NextTryTime`, `a`.`Priority`, `a`.`TryCount`
+FROM `AbpBackgroundJobs` AS `a`
+WHERE NOT (`a`.`IsAbandoned`) AND (`a`.`NextTryTime` <= @__Now_0)
+ORDER BY `a`.`Priority` DESC, `a`.`TryCount`, `a`.`NextTryTime`
+LIMIT @__p_1
+INFO  2023-03-13 13:54:50,648 [4    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`IsAbandoned`, `a`.`JobArgs`, `a`.`JobType`, `a`.`LastTryTime`, `a`.`NextTryTime`, `a`.`Priority`, `a`.`TryCount`
+FROM `AbpBackgroundJobs` AS `a`
+WHERE NOT (`a`.`IsAbandoned`) AND (`a`.`NextTryTime` <= @__Now_0)
+ORDER BY `a`.`Priority` DESC, `a`.`TryCount`, `a`.`NextTryTime`
+LIMIT @__p_1
+INFO  2023-03-13 13:54:55,652 [9    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`IsAbandoned`, `a`.`JobArgs`, `a`.`JobType`, `a`.`LastTryTime`, `a`.`NextTryTime`, `a`.`Priority`, `a`.`TryCount`
+FROM `AbpBackgroundJobs` AS `a`
+WHERE NOT (`a`.`IsAbandoned`) AND (`a`.`NextTryTime` <= @__Now_0)
+ORDER BY `a`.`Priority` DESC, `a`.`TryCount`, `a`.`NextTryTime`
+LIMIT @__p_1
+DEBUG 2023-03-13 14:01:16,807 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2023-03-13 14:01:16,901 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2023-03-13 14:01:16,922 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Geor.Web.Host.Startup.GeorWebHostModule, Geor.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 14:01:16,924 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Geor.GeorWebCoreModule, Geor.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 14:01:16,925 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Geor.GeorApplicationModule, Geor.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 14:01:16,925 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Geor.GeorCoreModule, Geor.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 14:01:16,925 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 14:01:16,926 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 14:01:16,926 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 14:01:16,927 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 14:01:16,927 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Geor.EntityFrameworkCore.GeorEntityFrameworkModule, Geor.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 14:01:16,928 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 14:01:16,928 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 14:01:16,929 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 14:01:16,929 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 14:01:16,929 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 14:01:16,930 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 14:01:16,931 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2023-03-13 14:01:16,986 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2023-03-13 14:01:16,986 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2023-03-13 14:01:16,986 [1    ] o.Configuration.LanguageManagementConfig - Converted Geor (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2023-03-13 14:01:16,986 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2023-03-13 14:01:17,262 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: Geor.EntityFrameworkCore.GeorDbContext, Geor.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2023-03-13 14:01:17,386 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2023-03-13 14:01:17,446 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2023-03-13 14:01:17,495 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2023-03-13 14:01:17,515 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Geor
+DEBUG 2023-03-13 14:01:17,543 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2023-03-13 14:01:17,548 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2023-03-13 14:01:17,553 [1    ] , Culture=neutral, PublicKeyToken=null]] - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[Geor.MultiTenancy.Tenant, Geor.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Geor.Authorization.Users.User, Geor.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2023-03-13 14:01:17,574 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 14 classes define auto mapping attributes
+DEBUG 2023-03-13 14:01:17,575 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Geor.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2023-03-13 14:01:17,577 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Geor.Users.Dto.CreateUserDto
+DEBUG 2023-03-13 14:01:17,578 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Geor.Users.Dto.UserDto
+DEBUG 2023-03-13 14:01:17,578 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Geor.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2023-03-13 14:01:17,578 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Geor.Sessions.Dto.UserLoginInfoDto
+DEBUG 2023-03-13 14:01:17,578 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Geor.Roles.Dto.PermissionDto
+DEBUG 2023-03-13 14:01:17,578 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Geor.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2023-03-13 14:01:17,578 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Geor.MultiTenancy.Dto.TenantDto
+DEBUG 2023-03-13 14:01:17,578 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Geor.Application.Dto.CountryDTO
+DEBUG 2023-03-13 14:01:17,578 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Geor.Application.Dto.CreateCountryInput
+DEBUG 2023-03-13 14:01:17,578 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Geor.Application.Dto.DeleteCountryInput
+DEBUG 2023-03-13 14:01:17,578 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Geor.Application.Dto.GetAllCountryInput
+DEBUG 2023-03-13 14:01:17,578 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Geor.Application.Dto.GetCountryInput
+DEBUG 2023-03-13 14:01:17,579 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Geor.Application.Dto.UpdateCountryInput
+INFO  2023-03-13 14:01:19,112 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`DeleterUserId`, `a`.`DeletionTime`, `a`.`DisplayName`, `a`.`IsDeleted`, `a`.`LastModificationTime`, `a`.`LastModifierUserId`, `a`.`Name`
+FROM `AbpEditions` AS `a`
+WHERE `a`.`Name` = 'Standard'
+LIMIT 1
+INFO  2023-03-13 14:01:19,229 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (28ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpLanguages` AS `a`
+    WHERE `a`.`TenantId` IS NULL AND (`a`.`Name` = @__language_Name_1))
+INFO  2023-03-13 14:01:19,234 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpLanguages` AS `a`
+    WHERE `a`.`TenantId` IS NULL AND (`a`.`Name` = @__language_Name_1))
+INFO  2023-03-13 14:01:19,237 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpLanguages` AS `a`
+    WHERE `a`.`TenantId` IS NULL AND (`a`.`Name` = @__language_Name_1))
+INFO  2023-03-13 14:01:19,239 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpLanguages` AS `a`
+    WHERE `a`.`TenantId` IS NULL AND (`a`.`Name` = @__language_Name_1))
+INFO  2023-03-13 14:01:19,241 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpLanguages` AS `a`
+    WHERE `a`.`TenantId` IS NULL AND (`a`.`Name` = @__language_Name_1))
+INFO  2023-03-13 14:01:19,244 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpLanguages` AS `a`
+    WHERE `a`.`TenantId` IS NULL AND (`a`.`Name` = @__language_Name_1))
+INFO  2023-03-13 14:01:19,246 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpLanguages` AS `a`
+    WHERE `a`.`TenantId` IS NULL AND (`a`.`Name` = @__language_Name_1))
+INFO  2023-03-13 14:01:19,249 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpLanguages` AS `a`
+    WHERE `a`.`TenantId` IS NULL AND (`a`.`Name` = @__language_Name_1))
+INFO  2023-03-13 14:01:19,251 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpLanguages` AS `a`
+    WHERE `a`.`TenantId` IS NULL AND (`a`.`Name` = @__language_Name_1))
+INFO  2023-03-13 14:01:19,253 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpLanguages` AS `a`
+    WHERE `a`.`TenantId` IS NULL AND (`a`.`Name` = @__language_Name_1))
+INFO  2023-03-13 14:01:19,256 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpLanguages` AS `a`
+    WHERE `a`.`TenantId` IS NULL AND (`a`.`Name` = @__language_Name_1))
+INFO  2023-03-13 14:01:19,258 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpLanguages` AS `a`
+    WHERE `a`.`TenantId` IS NULL AND (`a`.`Name` = @__language_Name_1))
+INFO  2023-03-13 14:01:19,260 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpLanguages` AS `a`
+    WHERE `a`.`TenantId` IS NULL AND (`a`.`Name` = @__language_Name_1))
+INFO  2023-03-13 14:01:19,270 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`ConcurrencyStamp`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`DeleterUserId`, `a`.`DeletionTime`, `a`.`Description`, `a`.`DisplayName`, `a`.`IsDefault`, `a`.`IsDeleted`, `a`.`IsStatic`, `a`.`LastModificationTime`, `a`.`LastModifierUserId`, `a`.`Name`, `a`.`NormalizedName`, `a`.`TenantId`
+FROM `AbpRoles` AS `a`
+WHERE `a`.`TenantId` IS NULL AND (`a`.`Name` = 'Admin')
+LIMIT 1
+INFO  2023-03-13 14:01:19,322 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__adminRoleForHost_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Name`
+FROM `AbpPermissions` AS `a`
+WHERE (`a`.`Discriminator` = 'RolePermissionSetting') AND (`a`.`TenantId` IS NULL AND (`a`.`RoleId` = @__adminRoleForHost_Id_0))
+INFO  2023-03-13 14:01:19,332 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`AccessFailedCount`, `a`.`AuthenticationSource`, `a`.`ConcurrencyStamp`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`DeleterUserId`, `a`.`DeletionTime`, `a`.`EmailAddress`, `a`.`EmailConfirmationCode`, `a`.`IsActive`, `a`.`IsDeleted`, `a`.`IsEmailConfirmed`, `a`.`IsLockoutEnabled`, `a`.`IsPhoneNumberConfirmed`, `a`.`IsTwoFactorEnabled`, `a`.`LastModificationTime`, `a`.`LastModifierUserId`, `a`.`LockoutEndDateUtc`, `a`.`Name`, `a`.`NormalizedEmailAddress`, `a`.`NormalizedUserName`, `a`.`Password`, `a`.`PasswordResetCode`, `a`.`PhoneNumber`, `a`.`SecurityStamp`, `a`.`Surname`, `a`.`TenantId`, `a`.`UserName`
+FROM `AbpUsers` AS `a`
+WHERE `a`.`TenantId` IS NULL AND (`a`.`UserName` = 'admin')
+LIMIT 1
+INFO  2023-03-13 14:01:19,420 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__name_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpSettings` AS `a`
+    WHERE ((`a`.`Name` = @__name_0) AND `a`.`TenantId` IS NULL) AND `a`.`UserId` IS NULL)
+INFO  2023-03-13 14:01:19,423 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__name_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpSettings` AS `a`
+    WHERE ((`a`.`Name` = @__name_0) AND `a`.`TenantId` IS NULL) AND `a`.`UserId` IS NULL)
+INFO  2023-03-13 14:01:19,425 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__name_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `AbpSettings` AS `a`
+    WHERE ((`a`.`Name` = @__name_0) AND `a`.`TenantId` IS NULL) AND `a`.`UserId` IS NULL)
+INFO  2023-03-13 14:01:19,487 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`ConnectionString`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`DeleterUserId`, `a`.`DeletionTime`, `a`.`EditionId`, `a`.`IsActive`, `a`.`IsDeleted`, `a`.`LastModificationTime`, `a`.`LastModifierUserId`, `a`.`Name`, `a`.`TenancyName`
+FROM `AbpTenants` AS `a`
+WHERE `a`.`TenancyName` = 'Default'
+LIMIT 1
+INFO  2023-03-13 14:01:19,526 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@___tenantId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`ConcurrencyStamp`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`DeleterUserId`, `a`.`DeletionTime`, `a`.`Description`, `a`.`DisplayName`, `a`.`IsDefault`, `a`.`IsDeleted`, `a`.`IsStatic`, `a`.`LastModificationTime`, `a`.`LastModifierUserId`, `a`.`Name`, `a`.`NormalizedName`, `a`.`TenantId`
+FROM `AbpRoles` AS `a`
+WHERE (`a`.`TenantId` = @___tenantId_0) AND (`a`.`Name` = 'Admin')
+LIMIT 1
+INFO  2023-03-13 14:01:19,534 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@___tenantId_0='?' (DbType = Int32), @__adminRole_Id_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Name`
+FROM `AbpPermissions` AS `a`
+WHERE (`a`.`Discriminator` = 'RolePermissionSetting') AND ((`a`.`TenantId` = @___tenantId_0) AND (`a`.`RoleId` = @__adminRole_Id_1))
+INFO  2023-03-13 14:01:19,540 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@___tenantId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`AccessFailedCount`, `a`.`AuthenticationSource`, `a`.`ConcurrencyStamp`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`DeleterUserId`, `a`.`DeletionTime`, `a`.`EmailAddress`, `a`.`EmailConfirmationCode`, `a`.`IsActive`, `a`.`IsDeleted`, `a`.`IsEmailConfirmed`, `a`.`IsLockoutEnabled`, `a`.`IsPhoneNumberConfirmed`, `a`.`IsTwoFactorEnabled`, `a`.`LastModificationTime`, `a`.`LastModifierUserId`, `a`.`LockoutEndDateUtc`, `a`.`Name`, `a`.`NormalizedEmailAddress`, `a`.`NormalizedUserName`, `a`.`Password`, `a`.`PasswordResetCode`, `a`.`PhoneNumber`, `a`.`SecurityStamp`, `a`.`Surname`, `a`.`TenantId`, `a`.`UserName`
+FROM `AbpUsers` AS `a`
+WHERE (`a`.`TenantId` = @___tenantId_0) AND (`a`.`UserName` = 'admin')
+LIMIT 1
+INFO  2023-03-13 14:01:19,621 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__ef_filter__p_0='?' (DbType = Boolean), @__ef_filter__p_1='?' (DbType = Boolean)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`DeleterUserId`, `a`.`DeletionTime`, `a`.`DisplayName`, `a`.`Icon`, `a`.`IsDeleted`, `a`.`IsDisabled`, `a`.`LastModificationTime`, `a`.`LastModifierUserId`, `a`.`Name`, `a`.`TenantId`
+FROM `AbpLanguages` AS `a`
+WHERE (@__ef_filter__p_0 OR NOT (`a`.`IsDeleted`)) AND (@__ef_filter__p_1 OR (`a`.`TenantId` IS NULL))
+INFO  2023-03-13 14:01:19,707 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__ef_filter__p_0='?' (DbType = Boolean)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`LastModificationTime`, `a`.`LastModifierUserId`, `a`.`Name`, `a`.`TenantId`, `a`.`UserId`, `a`.`Value`
+FROM `AbpSettings` AS `a`
+WHERE (@__ef_filter__p_0 OR (`a`.`TenantId` IS NULL)) AND (`a`.`UserId` IS NULL AND (`a`.`TenantId` IS NULL))
+INFO  2023-03-13 14:01:19,741 [1    ] tCore.Builder.RequestLocalizationOptions - Supported Request Localization Cultures: en,es-MX,fr,de,it,nl,pt-BR,tr,ru,ar,fa,ja,zh-Hans
+INFO  2023-03-13 14:01:19,975 [1    ] Microsoft.Hosting.Lifetime               - Application started. Press Ctrl+C to shut down.
+INFO  2023-03-13 14:01:19,976 [1    ] Microsoft.Hosting.Lifetime               - Hosting environment: Development
+INFO  2023-03-13 14:01:19,978 [1    ] Microsoft.Hosting.Lifetime               - Content root path: C:\Users\Alex\Desktop\GeorProjects\Geor\8.0.0\aspnet-core\src\Geor.Web.Host
+INFO  2023-03-13 14:01:19,999 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/ - -
+INFO  2023-03-13 14:01:20,102 [9    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Geor.Web.Host.Controllers.HomeController.Index (Geor.Web.Host)'
+INFO  2023-03-13 14:01:20,135 [9    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Geor.Web.Host.Controllers.HomeController (Geor.Web.Host).
+INFO  2023-03-13 14:01:20,311 [8    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (9ms) [Parameters=[@p0='?' (Size = 512), @p1='?' (Size = 64), @p2='?' (Size = 128), @p3='?' (Size = 2000), @p4='?' (Size = 2000), @p5='?' (Size = 1024), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime), @p8='?' (DbType = Int32), @p9='?' (DbType = Int64), @p10='?' (Size = 256), @p11='?' (Size = 1024), @p12='?' (Size = 4000), @p13='?' (Size = 256), @p14='?' (DbType = Int32), @p15='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `AbpAuditLogs` (`BrowserInfo`, `ClientIpAddress`, `ClientName`, `CustomData`, `Exception`, `ExceptionMessage`, `ExecutionDuration`, `ExecutionTime`, `ImpersonatorTenantId`, `ImpersonatorUserId`, `MethodName`, `Parameters`, `ReturnValue`, `ServiceName`, `TenantId`, `UserId`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+SELECT `Id`
+FROM `AbpAuditLogs`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+INFO  2023-03-13 14:01:20,360 [4    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2023-03-13 14:01:20,369 [4    ] c.Infrastructure.ControllerActionInvoker - Executed action Geor.Web.Host.Controllers.HomeController.Index (Geor.Web.Host) in 227.1545ms
+INFO  2023-03-13 14:01:20,371 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Geor.Web.Host.Controllers.HomeController.Index (Geor.Web.Host)'
+INFO  2023-03-13 14:01:20,388 [6    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/swagger/index.html - -
+INFO  2023-03-13 14:01:20,396 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/ - - - 302 - - 397.7809ms
+INFO  2023-03-13 14:01:20,531 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/swagger/index.html - - - 200 - text/html;charset=utf-8 142.7131ms
+INFO  2023-03-13 14:01:20,539 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/_vs/browserLink - -
+INFO  2023-03-13 14:01:20,540 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/_framework/aspnetcore-browser-refresh.js - -
+INFO  2023-03-13 14:01:20,553 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 13.1155ms
+INFO  2023-03-13 14:01:20,581 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 42.4857ms
+INFO  2023-03-13 14:01:20,603 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/AntiForgery/SetCookie - -
+INFO  2023-03-13 14:01:20,607 [8    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Geor.Web.Host.Controllers.AntiForgeryController.SetCookie (Geor.Web.Host)'
+INFO  2023-03-13 14:01:20,623 [8    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "SetCookie", controller = "AntiForgery", area = ""}. Executing controller action with signature Void SetCookie() on controller Geor.Web.Host.Controllers.AntiForgeryController (Geor.Web.Host).
+INFO  2023-03-13 14:01:20,634 [13   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/swagger/v1/swagger.json - -
+INFO  2023-03-13 14:01:20,716 [19   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 512), @p1='?' (Size = 64), @p2='?' (Size = 128), @p3='?' (Size = 2000), @p4='?' (Size = 2000), @p5='?' (Size = 1024), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime), @p8='?' (DbType = Int32), @p9='?' (DbType = Int64), @p10='?' (Size = 256), @p11='?' (Size = 1024), @p12='?' (Size = 4000), @p13='?' (Size = 256), @p14='?' (DbType = Int32), @p15='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `AbpAuditLogs` (`BrowserInfo`, `ClientIpAddress`, `ClientName`, `CustomData`, `Exception`, `ExceptionMessage`, `ExecutionDuration`, `ExecutionTime`, `ImpersonatorTenantId`, `ImpersonatorUserId`, `MethodName`, `Parameters`, `ReturnValue`, `ServiceName`, `TenantId`, `UserId`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+SELECT `Id`
+FROM `AbpAuditLogs`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+INFO  2023-03-13 14:01:20,735 [4    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2023-03-13 14:01:20,830 [4    ] c.Infrastructure.ControllerActionInvoker - Executed action Geor.Web.Host.Controllers.AntiForgeryController.SetCookie (Geor.Web.Host) in 205.655ms
+INFO  2023-03-13 14:01:20,832 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Geor.Web.Host.Controllers.AntiForgeryController.SetCookie (Geor.Web.Host)'
+INFO  2023-03-13 14:01:20,835 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/AntiForgery/SetCookie - - - 200 101 application/json;+charset=utf-8 232.2574ms
+INFO  2023-03-13 14:01:20,862 [13   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 227.5968ms
+INFO  2023-03-13 14:01:22,567 [13   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`IsAbandoned`, `a`.`JobArgs`, `a`.`JobType`, `a`.`LastTryTime`, `a`.`NextTryTime`, `a`.`Priority`, `a`.`TryCount`
+FROM `AbpBackgroundJobs` AS `a`
+WHERE NOT (`a`.`IsAbandoned`) AND (`a`.`NextTryTime` <= @__Now_0)
+ORDER BY `a`.`Priority` DESC, `a`.`TryCount`, `a`.`NextTryTime`
+LIMIT @__p_1
+INFO  2023-03-13 14:01:27,575 [13   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`IsAbandoned`, `a`.`JobArgs`, `a`.`JobType`, `a`.`LastTryTime`, `a`.`NextTryTime`, `a`.`Priority`, `a`.`TryCount`
+FROM `AbpBackgroundJobs` AS `a`
+WHERE NOT (`a`.`IsAbandoned`) AND (`a`.`NextTryTime` <= @__Now_0)
+ORDER BY `a`.`Priority` DESC, `a`.`TryCount`, `a`.`NextTryTime`
+LIMIT @__p_1
+INFO  2023-03-13 14:01:32,582 [13   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`IsAbandoned`, `a`.`JobArgs`, `a`.`JobType`, `a`.`LastTryTime`, `a`.`NextTryTime`, `a`.`Priority`, `a`.`TryCount`
+FROM `AbpBackgroundJobs` AS `a`
+WHERE NOT (`a`.`IsAbandoned`) AND (`a`.`NextTryTime` <= @__Now_0)
+ORDER BY `a`.`Priority` DESC, `a`.`TryCount`, `a`.`NextTryTime`
+LIMIT @__p_1
+INFO  2023-03-13 14:01:37,589 [13   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`IsAbandoned`, `a`.`JobArgs`, `a`.`JobType`, `a`.`LastTryTime`, `a`.`NextTryTime`, `a`.`Priority`, `a`.`TryCount`
+FROM `AbpBackgroundJobs` AS `a`
+WHERE NOT (`a`.`IsAbandoned`) AND (`a`.`NextTryTime` <= @__Now_0)
+ORDER BY `a`.`Priority` DESC, `a`.`TryCount`, `a`.`NextTryTime`
+LIMIT @__p_1
+INFO  2023-03-13 14:01:42,595 [13   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`IsAbandoned`, `a`.`JobArgs`, `a`.`JobType`, `a`.`LastTryTime`, `a`.`NextTryTime`, `a`.`Priority`, `a`.`TryCount`
+FROM `AbpBackgroundJobs` AS `a`
+WHERE NOT (`a`.`IsAbandoned`) AND (`a`.`NextTryTime` <= @__Now_0)
+ORDER BY `a`.`Priority` DESC, `a`.`TryCount`, `a`.`NextTryTime`
+LIMIT @__p_1
+INFO  2023-03-13 14:01:47,601 [4    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`IsAbandoned`, `a`.`JobArgs`, `a`.`JobType`, `a`.`LastTryTime`, `a`.`NextTryTime`, `a`.`Priority`, `a`.`TryCount`
+FROM `AbpBackgroundJobs` AS `a`
+WHERE NOT (`a`.`IsAbandoned`) AND (`a`.`NextTryTime` <= @__Now_0)
+ORDER BY `a`.`Priority` DESC, `a`.`TryCount`, `a`.`NextTryTime`
+LIMIT @__p_1
+INFO  2023-03-13 14:01:52,607 [4    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`CreationTime`, `a`.`CreatorUserId`, `a`.`IsAbandoned`, `a`.`JobArgs`, `a`.`JobType`, `a`.`LastTryTime`, `a`.`NextTryTime`, `a`.`Priority`, `a`.`TryCount`
+FROM `AbpBackgroundJobs` AS `a`
+WHERE NOT (`a`.`IsAbandoned`) AND (`a`.`NextTryTime` <= @__Now_0)
+ORDER BY `a`.`Priority` DESC, `a`.`TryCount`, `a`.`NextTryTime`
+LIMIT @__p_1

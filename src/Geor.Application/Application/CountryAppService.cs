@@ -1,15 +1,12 @@
-﻿using Abp.Application.Services;
-using Abp.Application.Services.Dto;
+﻿using Abp.Application.Services.Dto;
 using Abp.Domain.Repositories;
 using Abp.Extensions;
 using Abp.UI;
 using Geor.Application.Dto;
-using Microsoft.AspNetCore.SignalR.Protocol;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Geor.Application
@@ -26,7 +23,6 @@ namespace Geor.Application
         public async Task<Country> Create(CreateCountryDto input)
         {
             var country = await _countryRepository.InsertAsync(new Country(input.Name, input.CountryCode));
-
             return country;
         }
 

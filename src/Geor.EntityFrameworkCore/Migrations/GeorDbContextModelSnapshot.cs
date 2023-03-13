@@ -1332,6 +1332,9 @@ namespace Geor.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CountryCode")
+                        .IsUnique();
+
                     b.ToTable("Country");
                 });
 

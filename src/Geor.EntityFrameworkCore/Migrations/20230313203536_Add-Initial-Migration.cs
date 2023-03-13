@@ -1389,6 +1389,12 @@ namespace Geor.Migrations
                 name: "IX_AbpWebhookSendAttempts_WebhookEventId",
                 table: "AbpWebhookSendAttempts",
                 column: "WebhookEventId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Country_CountryCode",
+                table: "Country",
+                column: "CountryCode",
+                unique: true);
         }
 
         /// <inheritdoc />

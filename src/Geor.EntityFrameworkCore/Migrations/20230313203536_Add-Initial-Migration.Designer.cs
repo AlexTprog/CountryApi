@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Geor.Migrations
 {
     [DbContext(typeof(GeorDbContext))]
-    [Migration("20230310194949_Add-Initial-Migration")]
+    [Migration("20230313203536_Add-Initial-Migration")]
     partial class AddInitialMigration
     {
         /// <inheritdoc />
@@ -1334,6 +1334,9 @@ namespace Geor.Migrations
                         .HasColumnType("varchar(256)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CountryCode")
+                        .IsUnique();
 
                     b.ToTable("Country");
                 });

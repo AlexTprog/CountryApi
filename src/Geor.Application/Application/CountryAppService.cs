@@ -22,7 +22,8 @@ namespace Geor.Application
 
         public async Task<Country> Create(CreateCountryDto input)
         {
-            var country = await _countryRepository.InsertAsync(new Country(input.Name, input.CountryCode));
+            //Mejorar
+            var country = await _countryRepository.InsertAsync(new Country(input.Name, input.CountryCode));            
             return country;
         }
 

@@ -11,7 +11,6 @@ namespace Geor.Application
         Task<Country> Create(CreateCountryInput input);
         Task Delete(DeleteCountryInput input);
         Task<Country> Update(UpdateCountryInput input);
-
-        Task<ListResultDto<> GetAll(GetAllCountryInput input);
+        Task<ListResultDto<CountryListDto>> GetAll(GetAllCountryInput input);
     }
 }

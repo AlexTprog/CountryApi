@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace Geor.Application.Dto
 {
     [AutoMapFrom(typeof(Country))]
-    public class CountryListDto: EntityDto
+    public class CountryListDto : EntityDto
     {
         public string Name { get; set; }
         public string CountryCode { get; set; }

@@ -35,7 +35,7 @@ namespace Geor.Application
             throw new NotImplementedException();
         }
 
-        public Task<List<Country>> GetAll(GetAllCountryInput input)
+        public Task<ListResultDto<CountryListDto>> GetAll(GetAllCountryInput input)
         {
             throw new NotImplementedException();
         }

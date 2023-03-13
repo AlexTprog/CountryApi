@@ -7,10 +7,10 @@ namespace Geor.Application
 {
     public interface ICountryAppService : IApplicationService
     {
-        Task<Country> Get(GetCountryInput input);
-        Task<Country> Create(CreateCountryInput input);
-        Task Delete(DeleteCountryInput input);
+        Task<Country> Get(GetCountryDto input);
+        Task<Country> Create(CreateCountryDto input);
+        Task Delete(DeleteCountryDto input);
         Task<Country> Update(UpdateCountryInput input);
-        Task<ListResultDto<CountryListDto>> GetAll(GetAllCountryInput input);
+        Task<ListResultDto<CountryListDto>> GetAll(GetAllCountryDto input);
     }
 }

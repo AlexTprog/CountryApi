@@ -1,8 +1,11 @@
 ﻿using Abp.Application.Services;
 using Abp.Application.Services.Dto;
 using Abp.Domain.Repositories;
+using Abp.Extensions;
 using Abp.UI;
 using Geor.Application.Dto;
+using Microsoft.AspNetCore.SignalR.Protocol;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,29 +23,54 @@ namespace Geor.Application
             _countryRepository = countryRepository;
         }
 
-        public Task<Country> Create(CreateCountryInput input)
+        public async Task<Country> Create(CreateCountryDto input)
         {
-            throw new NotImplementedException();
+            var country = await _countryRepository.InsertAsync(new Country(input.Name, input.CountryCode));
+
+            return country;
         }
 
-        public Task Delete(DeleteCountryInput input)
+        public async Task Delete(DeleteCountryDto input)
         {
-            throw new NotImplementedException();
+            var country = await _countryRepository.GetAsync(input.Id);
+
+            if (country == null)
+            {
+                throw new UserFriendlyException($"Country with Id={input.Id} not found.");
+            }
+
+            await _countryRepository.DeleteAsync(country);
+
         }
 
-        public Task<Country> Get(GetCountryInput input)
+        public async Task<Country> Get(GetCountryDto input)
         {
-            throw new NotImplementedException();
+            var country = await _countryRepository.GetAsync(input.Id);
+            return country;
         }
 
-        public Task<ListResultDto<CountryListDto>> GetAll(GetAllCountryInput input)
+        public async Task<ListResultDto<CountryListDto>> GetAll(GetAllCountryDto input)
         {
-            throw new NotImplementedException();
+            var countries = _countryRepository.GetAll();
+            if (!input.CountryCode.IsNullOrEmpty())
+            {
+                countries = countries.Where(t => t.CountryCode.Contains(input.CountryCode));
+            }
+
+            var result = await countries.Skip(input.SkipCount).Take(input.MaxResultCount).ToListAsync();
+
+            return new ListResultDto<CountryListDto>(ObjectMapper.Map<List<CountryListDto>>(result));
         }
 
-        public Task<Country> Update(UpdateCountryInput input)
+        public async Task<Country> Update(UpdateCountryInput input)
         {
-            throw new NotImplementedException();
+            var country = await _countryRepository.GetAsync(input.Id);
+            if (country == null)
+            {
+                throw new UserFriendlyException($"Country with Id={input.Id} not found.");
+            }
+            var edit = await _countryRepository.UpdateAsync(country);
+            return edit;
         }
     }
 }

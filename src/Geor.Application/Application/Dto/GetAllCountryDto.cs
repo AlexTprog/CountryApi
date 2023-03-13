@@ -3,9 +3,10 @@
 namespace Geor.Application.Dto
 {
     [AutoMapTo(typeof(Country))]
-    public class GetAllCountryInput
+    public class GetAllCountryDto
     {
+        public string CountryCode { get; set; }
         public int SkipCount { get; set; }
-        public int MaxResultCount { get; set; }
+        public int MaxResultCount { get; set; } = 10;
     }
 }

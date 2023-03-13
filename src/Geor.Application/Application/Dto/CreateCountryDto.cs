@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Geor.Application.Dto
 {
     [AutoMapTo(typeof(Country))]
-    public class CreateCountryInput
+    public class CreateCountryDto
     {
         [Required]
         [StringLength(Country.MaxNameLength)]

@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Geor.Application
 {
-    public class CountryAppService : IApplicationService, ICountryAppService
+    public class CountryAppService : GeorAppServiceBase, ICountryAppService
     {
         private readonly IRepository<Country> _countryRepository;
 
@@ -25,7 +25,7 @@ namespace Geor.Application
             throw new NotImplementedException();
         }
 
-        public Task<Country> Delete(DeleteCountryInput input)
+        public Task Delete(DeleteCountryInput input)
         {
             throw new NotImplementedException();
         }
@@ -35,7 +35,7 @@ namespace Geor.Application
             throw new NotImplementedException();
         }
 
-        public Task<Country> GetAll(GetAllCountryInput input)
+        public Task<List<Country>> GetAll(GetAllCountryInput input)
         {
             throw new NotImplementedException();
         }
